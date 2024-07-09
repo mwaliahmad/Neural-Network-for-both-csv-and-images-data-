@@ -29,8 +29,8 @@ class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
         self.config = ConfigLoader()
-        self.images_parameters = load_parameters("Image_Parameters")
-        self.csv_parameters = load_parameters("CSV_Parameters")
+        self.images_parameters = None
+        self.csv_parameters = None
         self.setWindowTitle("Neural Network Trainer")
         self.setGeometry(100, 100, 800, 600)
 
@@ -238,7 +238,7 @@ class MainWindow(QMainWindow):
     def load_image_data(self, data_path):
         X = []
         y = []
-        for label in ["1", "0"]:
+        for label in ["1", "0"]:  # change these according to your folder structure
             folder_path = os.path.join(data_path, label)
             for filename in os.listdir(folder_path):
                 if filename.endswith(".jpg"):

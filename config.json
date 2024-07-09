@@ -16,9 +16,5 @@
         ],
         "learning_rate": 0.01,
         "num_iterations": 1200
-    },
-    "data_paths": {
-        "image_dataset": "Images",
-        "csv_dataset": "Indian Liver Patient Dataset (ILPD).csv"
     }
 }
