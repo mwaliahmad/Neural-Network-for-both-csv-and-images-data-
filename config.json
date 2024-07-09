@@ -1,0 +1,24 @@
+{
+    "image_classification": {
+        "layers": [
+            {"units": 128, "activation": "relu"},
+            {"units": 64, "activation": "relu"},
+            {"units": 1, "activation": "sigmoid"}
+        ],
+        "learning_rate": 0.01,
+        "num_iterations": 2500
+    },
+    "csv_classification": {
+        "layers": [
+            {"units": 64, "activation": "relu"},
+            {"units": 128, "activation": "relu"},
+            {"units": 1, "activation": "sigmoid"}
+        ],
+        "learning_rate": 0.01,
+        "num_iterations": 1200
+    },
+    "data_paths": {
+        "image_dataset": "Images",
+        "csv_dataset": "Indian Liver Patient Dataset (ILPD).csv"
+    }
+}
